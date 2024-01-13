@@ -1,0 +1,30 @@
+.work-card {
+    display: flex;
+    gap: 20rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--light-gray);
+    border-bottom: 1px solid var(--light-gray);
+    position: relative;
+
+    .work-card--title {
+        color: var(--black);
+        font-weight: bold;
+    }
+
+    .work-card--description {
+        font-size: 1.2rem !important;
+    }
+
+    .work-card--annotation {
+        position: absolute;
+        right: 0;
+        font-weight: 500;
+        font-size: 1.3rem !important;
+    }
+
+    span {
+        color: var(--black);
+        font-size: 1.5rem;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,40 @@
+#home {
+
+    h1 {
+        font-size: var(--title-size);
+    }
+
+    p {
+        font-size: var(--paragraph-size);
+    }
+
+    .home-cta {
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        cursor: none;
+
+        .home-arrow {
+            position: relative;
+            padding: 1.2rem;
+            border-radius: 100%;
+            background: var(--black);
+            height: 30px;
+            width: 30px;
+            overflow: hidden;
+            cursor: none;
+        }
+        
+        
+        .home-cta--arrow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transition: transform 200ms ease;
+            transform: translate(-50%, -50%);
+            cursor: none;
+        }
+
+    }
+}

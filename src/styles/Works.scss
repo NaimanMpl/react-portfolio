@@ -1,0 +1,24 @@
+#works {
+
+    h1 {
+        font-size: var(--title-size);
+    }
+
+    p {
+        font-size: var(--paragraph-size);
+    }
+
+    .works-description {
+        margin-top: 5rem;
+        max-width: 30%;
+    }
+
+    .works-container {
+        margin-top: 2rem;
+    }
+
+    h2 {
+        margin-top: 2rem;
+        font-size: 3vw;
+    }
+}
