@@ -79,7 +79,14 @@ const WorkCard = (props: WorkCardProps) => {
         </div>
         <img 
           ref={bgRef}
-          style={{ position: 'absolute', left: bgSettings.x - 325, top: '-50%', transform: 'scale(0)', width: '650px', pointerEvents: 'none' }} 
+          style={{ 
+            position: 'absolute', 
+            left: bgSettings.x - 325, 
+            top: '-50%', 
+            transform: 'scale(0)', 
+            width: '650px', 
+            pointerEvents: 'none' 
+          }} 
           src={background} 
           alt={title} 
         /> 

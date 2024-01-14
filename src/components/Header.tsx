@@ -1,9 +1,9 @@
+import { Link } from 'react-router-dom';
 import burgerIcon from '../assets/burger.svg';
-
 const Header = () => {
   return (
     <header>
-      <a href="/">Naïman</a>
+      <Link to='/'>Naïman</Link>
       <img src={burgerIcon} alt="Menu" />
     </header>
   )
