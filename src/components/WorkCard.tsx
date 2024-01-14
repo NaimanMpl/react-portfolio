@@ -1,20 +1,22 @@
 import gsap, { Power3 } from 'gsap';
 import { MouseEvent, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/WorkCard.scss';
 
 interface WorkCardProps {
   index: number,
   title: string,
   description: string,
-  annotation: string
-  background: string
+  annotation: string,
+  background: string,
+  href: string
 }
 
 const WorkCard = (props: WorkCardProps) => {
-  const { index, title, description, annotation, background } = props;
+  const { index, title, description, annotation, background, href } = props;
   const bgRef = useRef<HTMLImageElement>(null);
   const [ bgSettings, setBgSettings ] = useState({ x: 0, y: 0, moving: false, rotationAngle: 0 });
-  const [text, setText] = useState('');
+  const [ text, setText ] = useState('');
 
   const showPreview = (e: MouseEvent<HTMLDivElement>) => {
     
@@ -69,7 +71,7 @@ const WorkCard = (props: WorkCardProps) => {
   }
 
   return (
-    <>
+    <Link to={href}>
       <div onMouseEnter={showPreview} onMouseMove={movePreview} onMouseLeave={hidePreview}  className="work-card">
         <span>{index < 10 ? `0${index}` : index}.</span>
         <div>
@@ -84,14 +86,14 @@ const WorkCard = (props: WorkCardProps) => {
             left: bgSettings.x - 325, 
             top: '-50%', 
             transform: 'scale(0)', 
-            width: '650px', 
+            width: '500px',
             pointerEvents: 'none' 
           }} 
           src={background} 
           alt={title} 
         /> 
       </div>
-    </>
+    </Link>
   );
 }
 

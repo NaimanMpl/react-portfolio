@@ -2,6 +2,7 @@ import { AnimationProps, Variants, motion } from "framer-motion";
 import { ReactNode, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import '../styles/Curve.scss';
+import { AnimationTiming, anim } from "../utils/anim";
 
 interface CurveProps {
   children: ReactNode
@@ -10,15 +11,6 @@ interface CurveProps {
 interface CurveSVGProps {
   width: number,
   height: number
-}
-
-const anim = (variants: Variants): AnimationProps => {
-  return {
-    initial: 'initial',
-    animate: 'enter',
-    exit: 'exit',
-    variants
-  }
 }
 
 const Curve = ({ children }: CurveProps) => {
@@ -36,6 +28,8 @@ const Curve = ({ children }: CurveProps) => {
   });
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+
     const resize = () => {
       setDimensions({
         width: window.innerWidth,
@@ -57,11 +51,7 @@ const Curve = ({ children }: CurveProps) => {
     enter: {
       opacity: 0,
       top: -100,
-      transition: {
-        duration: .75,
-        delay: .3,
-        ease: [0.76, 0, 0.24, 1]
-      },
+      transition: AnimationTiming.easeInOutQuad(.3, .75),
       transitionEnd: {
         top: '47.5%'
       }
@@ -69,11 +59,7 @@ const Curve = ({ children }: CurveProps) => {
     exit: {
       opacity: 1,
       top: '40%',
-      transition: {
-        duration: .75,
-        delay: .3,
-        ease: [0.76, 0, 0.24, 1]
-      }
+      transition: AnimationTiming.easeInOutQuad(.3, .75)
     }
   }
 
@@ -114,11 +100,7 @@ const CurveSVG = ({ width, height }: CurveSVGProps) => {
     },
     enter: {
       d: targetPath,
-      transition: {
-        duration: .75,
-        delay: .3,
-        ease: [0.76, 0, 0.24, 1]
-      }
+      transition: AnimationTiming.easeInOutQuad(.3, .75)
     },
     exit: {
       d: initialPath
@@ -131,22 +113,14 @@ const CurveSVG = ({ width, height }: CurveSVGProps) => {
     },
     enter: {
       top: '-100vh',
-      transition: {
-        duration: .75,
-        delay: .3,
-        ease: [0.76, 0, 0.24, 1]
-      },
+      transition: AnimationTiming.easeInOutQuad(.3, .75),
       transitionEnd: {
         top: '100vh'
       }
     },
     exit: {
       top: '-300px',
-      transition: {
-        duration: .75,
-        delay: .3,
-        ease: [0.76, 0, 0.24, 1]
-      },
+      transition: AnimationTiming.easeInOutQuad(.3, .75),
     }
   }
   

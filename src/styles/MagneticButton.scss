@@ -1,0 +1,26 @@
+.magnetic {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: none;
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        font-size: 1.1rem;
+        color: var(--white);
+    }
+}
+
+#debugger {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--black);
+    color: var(--white);
+    padding: 2rem;
+    width: 20rem;
+}
