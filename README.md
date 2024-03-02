@@ -1,30 +1,42 @@
-# React + TypeScript + Vite
+# React Porfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React web application for my portfolio [IN CONSTRUCTION]
+![Portfolio](public/bg.png)
 
-Currently, two official plugins are available:
+### Built With
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* [![React][React.js]][React-url]
+* [![TS][Typescript]][Typescript-url]
+* [![SASS][SASS]][Sass-url]
 
-## Expanding the ESLint configuration
+# Live Demo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+A live demo is availaible [here](https://zelphix.alwaysdata.net/)
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Installation
+1. Clone the repo
+```sh
+git clone https://github.com/NaimanMpl/react-portfolio.git
+```
+2. Install npm packages
+```sh
+npm install
+```
+3. Launch server and client
+```sh
+npm run dev
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## License
+Distributed under the MIT License. See `LICENSE.txt` for more information.
+
+[Typescript]: https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white
+[Typescript-url]: https://www.typescriptlang.org/
+[Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
+[Nodejs-url]: https://nodejs.org/en
+[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[React-url]: https://reactjs.org/
+[SASS]: https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white
+[Sass-url]: https://sass-lang.com/
